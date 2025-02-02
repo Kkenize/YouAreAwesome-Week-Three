@@ -107,14 +107,20 @@ struct ContentView: View {
                 .buttonStyle(.borderedProminent)
                 .bold()
                 .font(.title2)
-                .tint(.blue)
             }
+            .tint(.accentColor)
         }
         .padding()
     }
 }
 
 
-#Preview {
+#Preview("Light Mode") {
     ContentView()
+        .preferredColorScheme(.light)
+}
+
+#Preview("Dark Mode") {
+    ContentView()
+        .preferredColorScheme(.dark)
 }
